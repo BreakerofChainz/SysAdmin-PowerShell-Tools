@@ -23,19 +23,19 @@ Optional custom path for the transcript file. If not provided but
 directory.
 
 .EXAMPLE
-.\SharedMailbox_Export_All.ps1
+.\ListallShared.ps1
 
 Connects to Exchange Online and creates a timestamped CSV file in the
 current directory containing all shared mailboxes.
 
 .EXAMPLE
-.\SharedMailbox_Export_All.ps1 -OutputPath "C:\Temp\AllSharedMailboxes.csv"
+.\ListallShared.ps1 -OutputPath "C:\Temp\ListallShared.csv"
 
 Connects to Exchange Online and exports all shared mailboxes to the
 specified CSV path.
 
 .EXAMPLE
-.\SharedMailbox_Export_All.ps1 -StartTranscript -Verbose
+.\ListallShared.ps1 -StartTranscript -Verbose
 
 Runs the script with detailed verbose output and logs everything
 to a transcript file.
@@ -233,3 +233,4 @@ finally {
 
     Write-Verbose "Shared mailbox export script finished."
 }
+
