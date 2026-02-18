@@ -47,7 +47,8 @@ Checks shared mailbox activity in Unified Audit Logs.
 - Execution policy may block local scripts
 - Missing permissions may prevent audit results for some mailboxes
 - Audit log retention limits restrict visibility of older activity
-- Large tenants may experience long runtimes. Use -Verbose when running this if you would like to verify the script is working correctly. 
+- Large tenants may experience long runtimes. Use -Verbose when running this if you would like to verify the script is working correctly.
+- Logging will, of course, need to be enabled in your tenant. 
 
 
 ## Recommended Usage
@@ -59,5 +60,6 @@ Checks shared mailbox activity in Unified Audit Logs.
 
 ## **Disclaimer**
 Scripts are provided as-is for administrative and audit purposes. Review usage and outputs in accordance with organizational security and compliance policies specific to your environment. 
+
 
 
