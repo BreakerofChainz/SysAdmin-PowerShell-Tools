@@ -47,19 +47,19 @@ Optional. Number of days to look back from the time the script is run.
 Defaults to 90. The script will NOT prompt; it just uses this value.
 
 EXAMPLE
-.\Check-SharedMailboxActivity.ps1
+.\SharedMailboxAudit.ps1
 
 Uses ALLUSERS.csv from the script folder, checks the last 90 days, and writes
 90DayInactiveAudit.csv in the same folder.
 
 EXAMPLE
-.\Check-SharedMailboxActivity.ps1 -OutputCsvPath "C:\Temp\Inactive.csv"
+.\SharedMailboxAudit.ps1 -OutputCsvPath "C:\Temp\Inactive.csv"
 
 Uses ALLUSERS.csv from the script folder as input and writes inactive mailboxes
 (with DisplayName) to C:\Temp\Inactive.csv.
 
 EXAMPLE
-.\Check-SharedMailboxActivity.ps1 -InputCsvPath "C:\Lists\SharedMailboxes.csv" -Verbose
+.\SharedMailboxAudit.ps1 -InputCsvPath "C:\Lists\SharedMailboxes.csv" -Verbose
 
 Overrides the default input file and shows detailed progress, still using 90 days lookback.
 #>
@@ -439,4 +439,5 @@ catch {
 finally {
     Disconnect-ExchangeAndCompliance
     Write-Verbose "Script completed."
+
 }
