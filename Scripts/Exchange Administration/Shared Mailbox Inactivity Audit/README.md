@@ -1,10 +1,10 @@
 
-Shared Mailbox Audit Scripts
+#Shared Mailbox Audit Scripts
 These scripts identify inactive shared mailboxes in Exchange Online using a fixed 90 day Unified Audit Log lookback period.
 They are designed for read-only auditing and mailbox lifecycle review. No changes are made to mailboxes or permissions.
 
 
-Included Scripts
+#Included Scripts
 List all Shared.ps1
 Exports all shared mailboxes from Exchange Online.
 Generates:
@@ -13,7 +13,7 @@ ALLUSERS.csv
 This script is expected to be run first.
 
 
-Shared Mailbox Audit.ps1
+#Shared Mailbox Audit.ps1
 Checks shared mailbox activity in Unified Audit Logs.
 Behavior:
 
@@ -61,3 +61,4 @@ Review results for cleanup, access review, or lifecycle decisions
 
 Disclaimer
 Scripts are provided as-is for administrative and audit purposes. Review usage and outputs in accordance with organizational security and compliance policies.
+
