@@ -6,13 +6,13 @@ They are designed for read-only auditing and mailbox lifecycle review. No change
 
 ## Included Scripts
 
-### List all Shared.ps1
+### ListallShared.ps1
 
 Exports all shared mailboxes from Exchange Online.
 Writes information to ALLUSERS.csv at the root of the script.
 This script is expected to be run first, as the next script uses this csv file. 
 
-### Shared Mailbox Audit.ps1
+### SharedMailboxAudit.ps1
 
 Checks shared mailbox activity in Unified Audit Logs.
 
@@ -52,11 +52,12 @@ Checks shared mailbox activity in Unified Audit Logs.
 
 ## Recommended Usage
 
-1. Run List all Shared.ps1 to generate ALLUSERS.csv
-2. Run Shared Mailbox Audit.ps1 to generate 90DayInactiveAudit.csv
+1. Run ListallShared.ps1 to generate ALLUSERS.csv
+2. Run SharedMailboxAudit.ps1 to generate 90DayInactiveAudit.csv
 3. Review results for cleanup, access review, or lifecycle decisions
 
 
 ## **Disclaimer**
 Scripts are provided as-is for administrative and audit purposes. Review usage and outputs in accordance with organizational security and compliance policies specific to your environment. 
+
 
