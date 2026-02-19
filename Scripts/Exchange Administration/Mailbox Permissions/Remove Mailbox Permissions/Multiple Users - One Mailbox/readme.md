@@ -5,7 +5,7 @@ This script removes mailbox permissions in Exchange Online for multiple users. I
 
 ## Included Scripts
 
-### Remove-MailboxPermissions-MultiUser.ps1
+### RemoveMultipleUsersOneMailbox.ps1
 Removes selected permission types from a specified mailbox for all users listed in a text file.
 
 **Behavior:**
