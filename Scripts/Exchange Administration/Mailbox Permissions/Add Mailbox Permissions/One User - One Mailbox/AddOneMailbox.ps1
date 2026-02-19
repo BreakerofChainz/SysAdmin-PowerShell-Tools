@@ -31,10 +31,6 @@
     When specified, the script is allowed to grant SendOnBehalfTo on the mailbox
     for the user. The actual granting also depends on the interactive prompt.
 
-.PARAMETER DisconnectWhenDone
-    When specified, the script will disconnect from Exchange Online at the end
-    using Disconnect-ExchangeOnline -Confirm:$false.
-
 .EXAMPLE
     .\Add-MailboxPermissions.ps1 -SharedMailbox "group@domain.com" -User "UPN"
 
@@ -321,9 +317,14 @@ process {
         throw
     }
     finally {
-        if ($exoConnected -and $DisconnectWhenDone.IsPresent) {
-            Write-Verbose "DisconnectWhenDone specified. Disconnecting from Exchange Online..."
-            Disconnect-ExchangeOnline -Confirm:$false
+        if ($script:ExoConnected) {
+            Write-Verbose "Disconnecting from Exchange Online..."
+            try {
+                Disconnect-ExchangeOnline -Confirm:$false
+            }
+            catch {
+                Write-Warning "An error occurred while disconnecting from Exchange Online: $($_.Exception.Message)"
+            }
             Write-Verbose "Disconnected from Exchange Online."
         }
     }
