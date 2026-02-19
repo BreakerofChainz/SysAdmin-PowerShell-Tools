@@ -1,8 +1,8 @@
 ﻿<#
-SYNOPSIS
+.SYNOPSIS
 Checks mailbox activity in Unified Audit Logs for the last 90 days and exports inactive mailboxes to CSV.
 
-DESCRIPTION
+.DESCRIPTION
 This script:
 1. Automatically uses ALLUSERS.csv located in the same folder as this script
    as the default input file. No prompts for time frame; lookback is fixed
@@ -34,31 +34,31 @@ This script:
 6. Exports ONLY mailboxes with NO activity in that period to '90DayInactiveAudit.csv'
    in the script directory (or a custom path if provided), including DisplayName.
 
-PARAMETER InputCsvPath
+.PARAMETER InputCsvPath
 Optional. Path to the input CSV file that contains a 'UserPrincipalName' column.
 Defaults to ALLUSERS.csv located in the same folder as this script.
 
-PARAMETER OutputCsvPath
+.PARAMETER OutputCsvPath
 Optional. Path to the output CSV file.
 Defaults to '90DayInactiveAudit.csv' in the same folder as this script.
 
-PARAMETER LookbackDays
+.PARAMETER LookbackDays
 Optional. Number of days to look back from the time the script is run.
 Defaults to 90. The script will NOT prompt; it just uses this value.
 
-EXAMPLE
+.EXAMPLE
 .\SharedMailboxAudit.ps1
 
 Uses ALLUSERS.csv from the script folder, checks the last 90 days, and writes
 90DayInactiveAudit.csv in the same folder.
 
-EXAMPLE
+.EXAMPLE
 .\SharedMailboxAudit.ps1 -OutputCsvPath "C:\Temp\Inactive.csv"
 
 Uses ALLUSERS.csv from the script folder as input and writes inactive mailboxes
 (with DisplayName) to C:\Temp\Inactive.csv.
 
-EXAMPLE
+.EXAMPLE
 .\SharedMailboxAudit.ps1 -InputCsvPath "C:\Lists\SharedMailboxes.csv" -Verbose
 
 Overrides the default input file and shows detailed progress, still using 90 days lookback.
@@ -441,3 +441,4 @@ finally {
     Write-Verbose "Script completed."
 
 }
+
