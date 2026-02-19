@@ -1,8 +1,8 @@
 ﻿<#
-SYNOPSIS
+.SYNOPSIS
 Exports all Shared Mailboxes in Exchange Online to a CSV file.
 
-DESCRIPTION
+.DESCRIPTION
 This script connects to Exchange Online, retrieves ALL mailboxes with
 RecipientTypeDetails "SharedMailbox" (no extra filtering), and exports
 them to a CSV file.
@@ -10,14 +10,14 @@ them to a CSV file.
 The script is structured with clear section breaks, similar to other audit
 scripts, to make it easy to read and maintain.
 
-PARAMETER OutputPath
+.PARAMETER OutputPath
 Full path to the CSV file to create. If not supplied, a file named
 "ALLUSERS.csv" will be created in the current directory.
 
-PARAMETER StartTranscript
+.PARAMETER StartTranscript
 If supplied, the script will start a transcript to log all console output.
 
-PARAMETER TranscriptPath
+.PARAMETER TranscriptPath
 Optional custom path for the transcript file. If not provided but
 -StartTranscript is used, a timestamped log will be created in the current
 directory.
@@ -233,4 +233,5 @@ finally {
 
     Write-Verbose "Shared mailbox export script finished."
 }
+
 
