@@ -2,7 +2,7 @@
 
 This script removes Full Access, Send As, and Send On Behalf permissions for a specified user on a specified mailbox in Exchange Online.  
 It makes changes to mailbox permissions and uses modern authentication.  
-The script now automatically disconnects from Exchange Online upon completion.
+The script automatically disconnects from Exchange Online upon completion.
 
 ## Included Scripts
 
