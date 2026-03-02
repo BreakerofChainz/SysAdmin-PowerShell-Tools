@@ -6,7 +6,7 @@ The script performs write operations to Exchange Online and provides a controlle
 
 ## Included Scripts
 
-### SharedMailboxPermissionManager.ps1
+### SharedMailboxPermissions.ps1
 
 A single WPF‑based tool that consolidates multiple mailbox permission operations into one interface.
 
